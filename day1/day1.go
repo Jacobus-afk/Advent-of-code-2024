@@ -15,12 +15,13 @@ type NumList struct {
 	rightList []int
 }
 
-func (n *NumList) smallest() (int, int) {
-	return slices.Min(n.leftList), slices.Min(n.rightList)
-}
+// func (n *NumList) smallest() (int, int) {
+// 	return slices.Min(n.leftList), slices.Min(n.rightList)
+// }
 
 func (n *NumList) popMin() int {
-	leftMin, rightMin := n.smallest()
+  leftMin := slices.Min(n.leftList)
+  rightMin := slices.Min(n.rightList)
 
 	leftMinIndex := getMinIdenx(leftMin, n.leftList)
 	rightMinIndex := getMinIdenx(rightMin, n.rightList)
