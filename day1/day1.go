@@ -1,7 +1,6 @@
 package main
 
 import (
-	// "fmt"
 	"bufio"
 	"fmt"
 	"os"
@@ -14,10 +13,6 @@ type NumList struct {
 	leftList  []int
 	rightList []int
 }
-
-// func (n *NumList) smallest() (int, int) {
-// 	return slices.Min(n.leftList), slices.Min(n.rightList)
-// }
 
 func (n *NumList) popMin() int {
   leftMin := slices.Min(n.leftList)
